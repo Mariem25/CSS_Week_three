@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>CSS</title>
+ <style>
+
+*{
+box-sizing: border-box;
+}
+ 
+body{
+font-size: x-large;
+    font-weight: bold;
+
+}
+
+.parent .baby:only-of-type  {
+color: red;
+}
+</style>
+  </head>
+
+
+  <body>
+
+<div class="parent">
+  <div class="baby">Testing</div>
+  <div class="baby">Testing</div>
+</div>
+<div class="parent">
+  <div class="baby">Elzero</div>
+</div>
+
+<div class="parent">
+  <div>
+    <div>Testing</div>
+  </div>
+
+  <div class="baby">Testing</div>
+</div>
+<div class="baby">Testing</div>
+
+ </body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>CSS</title>
+ <style>
+*{
+box-sizing: border-box;
+}
+
+div{
+width: 200px;
+    height: 200px;
+    position: absolute;
+    background-color: #607d8b;
+    color: white;
+    border-bottom: solid 6px black;
+    transform: translate(-50%,-50%);
+    left: 50%;
+    top: 50%;
+}
+
+div::before{
+content: "Elzero";
+    position: absolute;
+    bottom: 5px;
+    left: 11px;
+    font-family: sans-serif;
+}
+
+div::after{
+content: "";
+    width: inherit;
+    height: inherit;
+    position: absolute;
+    background-color: black;
+    border-bottom: solid 5px white;
+    border-right: solid 5px white;
+    top: -2px;
+    left: -2px;
+    transform: rotate(45deg) scale(.693) translate(-50%,-49%);
+}
+
+</style>
+  </head>
+
+
+  <body>
+
+<div></div>
+
+ </body>
+</html>

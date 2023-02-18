@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>CSS</title>
+ <style>
+*{
+box-sizing: border-box;
+}
+
+.main{
+width: 200px;
+    height: 200px;
+    background-color: antiquewhite;
+    /* margin: 20px auto; */
+    position: absolute;
+    transform-style: preserve-3d;
+    transition: 1s;
+    left: 50%;
+    top: 50%;
+    /* transform: translate(-50%,-50%); */
+    margin: -100px 0 0 -100px;
+
+}
+
+.main::after{
+content: "Front";
+    position: absolute;
+    color: white;
+    background-color: #fa3664;
+    width: inherit;
+    height: inherit;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: sans-serif;
+    font-size: xx-large;
+backface-visibility: hidden;
+
+}
+
+.main::before{
+content: "Back";
+    position: absolute;
+    color: white;
+    background-color: #1692fc;
+    width: inherit;
+    height: inherit;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: sans-serif;
+    font-size: xx-large;
+transform: rotatey(180deg);
+}
+
+.main:hover {
+transform:  rotatey(180deg);
+}
+
+</style>
+  </head>
+
+
+  <body>
+<div class="main">
+<div class="front"></div>
+<div class="black"></div>
+</div>
+ </body>
+</html>

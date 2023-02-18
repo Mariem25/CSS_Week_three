@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>CSS</title>
+ <style>
+
+*{
+box-sizing: border-box;
+}
+ 
+body{
+font-size: x-large;
+    font-weight: bold;
+
+}
+
+div:not(.no-need) div:last-child:nth-child(2)
+ {
+color: red;
+}
+</style>
+  </head>
+
+
+  <body>
+
+
+<div>
+  <p>Testing</p>
+  <div title="Elzero">Testing</div>
+  <p>Testing</p>
+</div>
+<div>
+  <p>Testing</p>
+  <div title="Elzero">Elzero</div>
+</div>
+<div class="no-need">
+  <p>Testing</p>
+  <div title="Elzero">Testing</div>
+</div>
+<div>
+  <p>Testing</p>
+  <p>Testing</p>
+  <div class="no-need" title="Elzero">Testing</div>
+</div>
+<div>
+  <p title="Elzero">Testing</p>
+  <p title="Elzero">Testing</p>
+  <div>Testing</div>
+</div>
+<div>
+  <p>Testing</p>
+  <div>Testing</div>
+  <div>Testing</div>
+</div>
+</div>
+
+ </body>
+</html>

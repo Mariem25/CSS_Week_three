@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>CSS</title>
+<style>
+
+*{
+box-sizing: border-box;
+}
+ 
+body{
+font-family: sans-serif;
+margin: 0;
+}
+
+div{
+    background-color: #ddd;
+    margin: 35px;
+    padding: 33px;
+    font-size: large;
+    font-weight: bold;
+    position: relative;
+}
+
+
+.arrow::before{
+    content: "";
+    position: absolute;
+}
+
+.top::before{
+    top: -49px;
+    left: 50%;
+    transform: translatex(-50%);
+    border: 25px solid;
+    border-color: transparent transparent #ddd transparent;
+}
+
+.bottom::before{
+    top: 60px;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 25px solid;
+    border-color: #ddd transparent transparent transparent;
+}
+
+.left::before{
+    top: 50%;
+    left: -49px;
+    transform: translateY(-50%);
+    border: 25px solid;
+    border-color: transparent #ddd transparent transparent;
+}
+
+.right::before{
+    top: 50%;
+    right: -49px;
+    transform: translateY(-50%);
+    border: 25px solid;
+    border-color: transparent transparent transparent #ddd;
+
+}
+
+
+
+</style>
+  </head>
+
+
+  <body>
+
+<div class="arrow top">Elzero</div>
+<div class="arrow right">Elzero</div>
+<div class="arrow bottom">Elzero</div>
+<div class="arrow left">Elzero</div>
+
+
+ </body>
+</html>

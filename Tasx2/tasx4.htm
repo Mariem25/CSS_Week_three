@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>CSS</title>
+<style>
+
+
+*{
+box-sizing: border-box;
+} 
+
+body{
+font-family: sans-serif;
+margin: 0;
+}
+
+
+.parent{
+display: grid;
+    width: 200px;
+    height: 200px;
+    grid-template-columns: repeat(9, 1fr);
+    grid-template-rows: repeat(7, 1fr);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+
+
+
+.parent div{
+background-color: #323234;
+}
+
+.one{
+        grid-area: 1/1/8/2;
+}
+.two{
+grid-area: 2/1/8/2;
+}
+.three{
+grid-area: 4/1/5/5;
+}
+.four{
+    grid-area: 7/1/8/5;
+}
+
+.five{
+    grid-area: 1/1/2/5;
+}
+.six{
+grid-area: 1/6/8/7;
+}
+.seven{
+        grid-area: 7/6/8/10;
+}
+
+
+.parent::before{
+
+    content: "";
+    width: 19px;
+    height: 19px;
+    background-color: #fea604;
+    position: absolute;
+    top: 5px;
+    left: 63px;
+animation-name: move_one;
+animation-iteration-count: infinite;
+    animation-duration: 10s;
+    animation-timing-function: linear;
+}
+
+@keyframes move_one{
+
+5%{
+top: 5px;
+left: 1.7px;
+}
+
+8%{
+top: 90px;
+left: 1.7px;
+}
+11%{
+top: 90px;
+left: 63px;
+}
+
+17%{
+top: 90px;
+left: 1.7px;
+}
+
+21%{
+top: 177px;
+left: 1.7px;
+}
+
+25%{
+top: 177px;
+left: 63px;
+}
+
+29%{
+top: 177px;
+left: 1.7px;
+}
+
+32%{
+top: 5px;
+left: 1.7px;
+}
+
+37%{
+top: 5px;
+left: 63px;
+}
+}
+
+.parent::after{
+   content: "";
+    width: 16px;
+    height: 19px;
+    background-color: #fea604;
+    position: absolute;
+    top: 178px;
+    left: 180px;
+animation-name: move_two;
+//visibility: hidden;
+//opacity: 1;
+animation-duration: 10s;
+animation-iteration-count: infinite;
+   animation-timing-function: linear;
+}
+
+@keyframes move_two{
+
+0%{
+visibiltiy: hidden;
+opacity: 0;
+top: 178px;
+left: 180px;
+}
+
+50%{
+visibiltiy: hidden;
+opacity: 0;
+top: 178px;
+left: 180px;
+}
+51%{
+visibiltiy: hidden;
+opacity: 1;
+top: 178px;
+left: 180px;
+}
+
+75%{
+visibiltiy: visible;
+opacity: 1;
+top: 178px;
+left: 114px;
+}
+
+90%{
+visibiltiy: visible;
+opacity: 1;
+top: 5px;
+left: 114px;
+}
+
+100%{
+visibiltiy: visible;
+opacity: 0;
+top: 5px;
+left: 114px;
+}
+}
+
+</style>
+  </head>
+
+
+  <body>
+
+<div class="parent">
+
+<div class="one"></div>
+<div class="two"></div>
+<div class="three"></div>
+<div class="four"></div>
+<div class="five"></div>
+<div class="six"></div>
+<div class="seven"></div>
+
+
+</div>
+
+
+ </body>
+</html>
